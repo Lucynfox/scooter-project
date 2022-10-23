@@ -1,0 +1,30 @@
+classDiagram
+
+    class Scooter {
+    +string station
+    +string user
+    +string serial
+    +string charge
+    +string isBroken
+    +string docked
+    +rent()
+    +dock(station)
+    +recharge()
+    +requestRepair()
+    }
+
+    class User {
+    +string username
+    +string password
+    +string age
+    }
+
+    class ScooterApp {
+    +object stations
+    +object registeredUsers
+    +register(user)
+    +logIn(username, password)
+    +addScooter(location, scooter)
+    +RemoveScooter(scooterToRemove)
+    }
+
