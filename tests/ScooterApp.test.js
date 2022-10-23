@@ -7,7 +7,7 @@ describe('scooter object', () => {
     const scooterObj = new ScooterApp()
     test('does something', () => {
       // edit this to be a real test!
-      expect(false).toEqual(true);
+      expect(scooterObj).toEqual(true);
     }
   )
   })
@@ -15,19 +15,20 @@ describe('scooter object', () => {
   describe('scooter methods', () => {
     const scooterObj2 = new ScooterApp()
 // register user
-test('has a price', () => {
-    expect(scooterObj2.age).toBe(10)
+test('register user', () => {
+    expect(typeof scooterObj2.register(user)).toBe('class')
 })
 // log in
-test('has a price', () => {
-    expect(scooterObj2.price).toBe(true)
+test('log in', () => {
+    loginOfscooterObj2 = scooterObj2.logIn('username', 'password')
+    expect(loginOfscooterObj2).toBe(true)
 })
 // add scooter
-test('has a price', () => {
-    expect(scooterObj2.price).toBe(10)
+test('add scooter', () => {
+    expect(scooterObj2.addScooter(location, scooter)).toBe(10)
 })
 // remove scooter
-test('has a price', () => {
-    expect(scooterObj2.price).toBe(10)
+test('remove scooter', () => {
+    expect(scooterObj2.RemoveScooter(scooterToRemove)).toBe(10)
 })
   })
