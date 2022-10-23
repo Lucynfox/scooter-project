@@ -32,3 +32,4 @@ test('remove scooter', () => {
     expect(scooterObj2.RemoveScooter(scooterToRemove)).toBe(10)
 })
   })
+  
