@@ -18,20 +18,23 @@ describe('scooter methods', () => {
 
   //rent method
   test('rent method', () => {
-    expect(scooterObj2.price).toBe(true)
+    scooterObj2.charge = 21
+    expect(scooterObj2.rent()).toBe('Enjoy the ride!')
 })
 
   //dock method
   test('dock method', () => {
-    expect(scooterObj2.price).toBe(true)
+    scooterObj2.dock(station)
+    expect(scooterObj2.user).toBe("")
 })
 
   //requestRepair method
   test('requestRepair method', () => {
-    expect(scooterObj2.price).toBe(true)
+    expect(scooterObj2.requestRepair()).toBe(true)
 })
   //charge method
   test('charge method', () => {
-    expect(scooterObj2.recharge()).toBe(true)
+    scooterObj2.recharge()
+    expect(scooterObj2.charge).toBe(100)
 })
 })
