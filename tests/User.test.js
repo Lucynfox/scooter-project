@@ -6,7 +6,7 @@ describe('The user class', () => {
 
 // test username
 test('has an username', () => {
-    expect(user1.author).toBe('username1')
+    expect(user1.username).toBe('username1')
 })
 
 // test password

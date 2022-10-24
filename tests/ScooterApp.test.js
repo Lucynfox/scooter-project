@@ -3,33 +3,35 @@ const User = require('../src/User')
 const ScooterApp = require('../src/ScooterApp')
 
 // ScooterApp tests here
-describe('scooter object', () => {
-    const scooterObj = new ScooterApp()
-    test('does something', () => {
+describe('scooterApp object', () => {
+    const scooterAppObj = new ScooterApp()
+    test('Manhattan key has empty array as value', () => {
       // edit this to be a real test!
-      expect(scooterObj).toEqual(true);
+      expect(scooterAppObj.stations["Manhattan"]).toEqual([]);
     }
   )
   })
 
   describe('scooter methods', () => {
-    const scooterObj2 = new ScooterApp()
+    const scooterAppObj2 = new ScooterApp()
+    const appUser = new User('username', 'password', 21)
 // register user
 test('register user', () => {
-    expect(typeof scooterObj2.register(user)).toBe('class')
+  scooterAppObj2.register(appUser)
+    expect(scooterAppObj2.registeredUsers[appUser.username]).toBe('username')
 })
 // log in
 test('log in', () => {
-    loginOfscooterObj2 = scooterObj2.logIn('username', 'password')
-    expect(loginOfscooterObj2).toBe(true)
+    loginOfscooterObj2 = scooterAppObj2.logIn('username', 'password')
+    expect(scooterAppObj2['username'][loggedIn]).toBe(true)
 })
 // add scooter
-test('add scooter', () => {
-    expect(scooterObj2.addScooter(location, scooter)).toBe(10)
-})
+// test('add scooter', () => {
+//     expect(scooterObj2.addScooter(location, scooter)).toBe(10)
+// })
 // remove scooter
-test('remove scooter', () => {
-    expect(scooterObj2.RemoveScooter(scooterToRemove)).toBe(10)
-})
+// test('remove scooter', () => {
+//     expect(scooterObj2.RemoveScooter(scooterToRemove)).toBe(10)
+// })
   })
   

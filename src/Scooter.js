@@ -1,3 +1,5 @@
+
+
 class Scooter{
   // scooter code here
   constructor(station, user){
@@ -10,7 +12,7 @@ class Scooter{
   }
 
   rent(){
-    if (isBroken == false && charge > 20){
+    if (this.isBroken == false && this.charge > 20){
       this.docked == false
       console.log('Enjoy the ride!”')
     } else if (charge <= 20){
@@ -31,13 +33,16 @@ class Scooter{
 
   }
 
-  recharge(){
-    this.charge = 100
+ async recharge(){
+  await new Promise(resolve => setTimeout(resolve, 1000))
+  this.charge = 100
   }
 
-  requestRepair(){
-    setInterval(function () {console.log("Repair has been complete")}, 1000);
+  async requestRepair() {
+    this.isBroken = true
+    await new Promise(resolve => setTimeout(resolve, 1000))
     this.isBroken = false
+    console.log("Repair has been complete")
   }
 }
 
